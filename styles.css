@@ -55,6 +55,8 @@ main {
     margin: 80px 0 var(--spc-normal);
     min-width: 320px;
     max-width: 350px;
+    /* box-shadow: 0px 10px 100px var(--clr-grd-soft-violet); */
+    box-shadow: 0 30px 30px -30px var(--clr-txt-very-dark-blue);
 }
 
 .illustration-wrapper {
@@ -95,7 +97,7 @@ details {
     border-bottom: 1px solid var(--clr-divd-light-grayish-blue);
 }
 
-summary {
+details > summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,9 +105,14 @@ summary {
     font-size: var(--fs-small);
     list-style-type: none;
     padding: var(--spc-small) 0;
+
+    cursor: pointer;
+    transition: margin 0.2s ease-out;
 }
 
-details > summary:focus {
+details > summary:focus,
+details > summary:hover {
+  color: var(--clr-txt-soft-red);
   outline: none;
 }
 
@@ -121,6 +128,8 @@ details > summary::after {
 details[open] > summary {
     font-weight: var(--fw-bold);
     color: var(--clr-txt-very-dark-blue);
+    padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
 details[open] > summary::after {
@@ -131,12 +140,6 @@ details[open] > p {
     margin-right: var(--spc-large);
     color: var(--clr-txt-dark-grayish-blue);
 }
-
-
-/*
-mobile: 375px
-desktop: 1440px
-*/
 
 @media only screen and (min-width: 1440px) {
     :root {
@@ -176,8 +179,13 @@ desktop: 1440px
     .illustration-box img {
         position: relative;
         bottom: 295px;
-        right: 240px; /*285 for active*/
+        right: 240px;
+        transition: right 1.5s;
         z-index: 1;
+    }
+
+    .illustration-box:hover img {
+        right: 285px;
     }
 
     .illustration-woman img {
