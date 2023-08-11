@@ -27,6 +27,7 @@
     --spc-normal: 16px;
     --spc-large: 32px;
     --spc-larger: 48px;
+    --spc-huge: 80px;
 }
 
 body {
@@ -136,3 +137,62 @@ details[open] > p {
 mobile: 375px
 desktop: 1440px
 */
+
+@media only screen and (min-width: 1440px) {
+    :root {
+        --fs-smaller: 14px;
+        --fs-small: 16px;
+        --fs-large: 36px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+        padding: 0px;
+        min-width: 1000px;
+        max-width: 1000px;
+    }
+
+    .illustration-wrapper {
+        height: 100%;
+    }
+
+    .hide-overflow {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .illustration-bg-pattern img {
+        position: absolute;
+        left: auto;
+        max-width: none;
+        width: 1000px;
+        bottom: -170px;
+        right: 85px;
+    }
+
+    .illustration-box img {
+        position: relative;
+        bottom: 295px;
+        right: 240px; /*285 for active*/
+        z-index: 1;
+    }
+
+    .illustration-woman img {
+        position: absolute;
+        width: 500px;
+        bottom: 60px;
+        right: 85px;
+    }
+
+    .faq-wrapper {
+        margin: 0;
+        padding: var(--spc-huge) var(--spc-huge) var(--spc-huge) 0;
+    }
+
+    h1 {
+        text-align: left;
+    }
+}
