@@ -14,9 +14,9 @@
     --clr-grd-soft-blue: hsl(240, 73%, 65%);
     --clr-divd-light-grayish-blue: hsl(240, 5%, 91%);
 
-    --fs-smaller: 12px;
-    --fs-small: 14px;
-    --fs-large: 32px;
+    --fs-smaller: 0.75rem;
+    --fs-small: 0.875rem;
+    --fs-large: 2rem;
 
     --fw-normal: 400;
     --fw-bold: 700;
@@ -52,10 +52,9 @@ main {
     background-color: white;
     border-radius: var(--br-normal);
     padding: var(--spc-larger) var(--spc-large);
-    margin: 80px 0 var(--spc-normal);
+    margin: 80px 0 var(--spc-large);
     min-width: 320px;
     max-width: 350px;
-    /* box-shadow: 0px 10px 100px var(--clr-grd-soft-violet); */
     box-shadow: 0 30px 30px -30px var(--clr-txt-very-dark-blue);
 }
 
@@ -204,3 +203,6 @@ details[open] > p {
         text-align: left;
     }
 }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: var(--clr-txt-very-dark-blue); }
