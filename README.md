@@ -31,9 +31,10 @@ Users should be able to:
 
 ### Links
 **TBD**
-[//]: # (- Solution URL: [Add solution URL here](https://your-solution-url.com))
-[//]: # (- Live Site URL: [Add live site URL here](https://your-live-site-url.com))
-
+<!---
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-->
 ## My process
 
 ### Built with
@@ -49,11 +50,15 @@ Users should be able to:
 ```css
 box-shadow: 0 30px 30px -30px var(--clr-txt-very-dark-blue);
 ```
-- You can use <details> to create a NoJS-Accordion
+- You can use the details-tag to create a NoJS-Accordion
 - To create an arrow, like in the accordion, you could use a pseudo-element which is an empty box with a border on only 2 sides and tilt it slightly. In this project, the arrow was already provided.
-- To create and open/close animation on the <details> you can use a margin-bottom with a transition
+- To create and open/close animation on the details-tag you can use a margin-bottom with a transition
 - transitions in general open crazy possibilities for interactivity, especially the timing-functions
-- To hide overflow of an absolute-positioned element, the parent needs to be relative-positioned and have 'overflow: hidden;'
+- To hide overflow of an absolute-positioned element, the parent needs:
+```css
+position: relative;
+overflow: hidden;
+```
 
 ## Author
 
@@ -61,5 +66,5 @@ box-shadow: 0 30px 30px -30px var(--clr-txt-very-dark-blue);
 
 ## Acknowledgments
 
-- An anonymous soul of the internet that gave me the idea to use <details> for the accordion. I can't for the life of me find the website again. Thank you, whoever you are o7.
+- An anonymous soul of the internet that gave me the idea to use the details-tag for the accordion. I can't for the life of me find the website again. Thank you, whoever you are o7.
 
